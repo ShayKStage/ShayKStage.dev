@@ -10,6 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.1.9"
+    "@astrojs/markdoc": "^0.1.0",
+    "@astrojs/mdx": "^0.18.2",
+    "@astrojs/prefetch": "^0.2.1",
+    "@astrojs/prism": "^2.1.1",
+    "@astrojs/sitemap": "^1.2.1",
+    "@astrojs/solid-js": "^2.1.0",
+    "@astrojs/vue": "^2.1.0",
+    "astro": "^2.1.9",
+    "solid-js": "^1.7.1",
+    "vue": "^3.2.47"
   }
 }

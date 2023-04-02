@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import {Prism} from "@astrojs/prism";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -33,6 +34,7 @@ import Card from '../components/Card.astro';
 			/>
 		</ul>
 	</main>
+	<Prism lang="rust" code={`println!("t");`} />
 </Layout>
 
 <style>
