@@ -16,6 +16,7 @@ permissions:
 
 jobs:
   build:
+    needs: build-css
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
