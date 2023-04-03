@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://314shadepi.github.io/sitemap-index.xml

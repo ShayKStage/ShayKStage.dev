@@ -9,5 +9,6 @@ import markdoc from "@astrojs/markdoc";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://314shadepi.github.io',
   integrations: [mdx(), vue(), solidJs(), sitemap(), prefetch(), markdoc()]
 });
