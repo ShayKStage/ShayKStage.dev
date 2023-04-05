@@ -4,8 +4,7 @@ export interface Props {
 }
 
 import '../../styles/global.scss'
-
-import { Icon } from 'astro-icon'
+import 'primeicons/primeicons.css';
 
 const { title } = Astro.props;
 ---
@@ -21,13 +20,21 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body x-data="{ menu_open: false }">
 		<header>
-			<div id="menu-toggle"><Icon pack="mdi" name="menu"/></div>
+			<div id="menu-toggle" @click="menu_open = ! menu_open">
+				<span class="pi pi-bars" style="font-size: 2rem" />
+			</div>
 			<div id="title">
 				<h1>{title}</h1>
 			</div>
 		</header>
+		<div x-show="menu_open" x-transition @click.outside="menu_open = false" id="menu">
+			<a href="tttt">About</a>
+			<a href="tttt">Services</a>
+			<a href="tttt">Clients</a>
+			<a href="tttt">Contact</a>
+		</div>
 		<div id="space-top" />
 		<slot />
 	</body>
