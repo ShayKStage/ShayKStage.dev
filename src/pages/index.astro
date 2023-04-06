@@ -2,11 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import {Prism} from "@astrojs/prism";
+import SolidTest from "../components/SolidTest.jsx";
 ---
 
 <Layout title="314ShadePi">
 	<main>
-		<h1>Welcome to <span class="text-gradient">314ShadePi.github.io</span></h1>
+		<h1><span style="color:#FF0000">l</span><span style="color:#FFAA00">o</span><span style="color:#AAFF00">l</span> <span style="color:#00FF00">h</span><span style="color:#00FFAA">i</span><span style="color:#00AAFF">,</span> <span style="color:#0000FF">i</span><span style="color:#AA00FF">'</span><span style="color:#FF00AA">m</span> <span class="text-gradient">Shay</></h1>
 		<!--<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
@@ -15,7 +16,6 @@ import {Prism} from "@astrojs/prism";
 			/>
 		</ul>-->
 	</main>
-	<Prism lang="rust" code={`println!("t");\nt();`} />
 </Layout>
 
 <style>
@@ -23,6 +23,10 @@ import {Prism} from "@astrojs/prism";
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 60ch;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		text-align: center;
 	}
 	h1 {
 		font-size: 3rem;

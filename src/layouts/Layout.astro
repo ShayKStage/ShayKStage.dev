@@ -3,7 +3,7 @@ export interface Props {
 	title: string;
 }
 
-import '../../styles/global.scss'
+import '../../styles/global.scss?global'
 import 'primeicons/primeicons.css';
 
 const { title } = Astro.props;
@@ -15,6 +15,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
+		<link href="/styles/prism-duotone-sea.css" rel="stylesheet" />
 		<link href="/styles/prism.css" rel="stylesheet" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<meta name="generator" content={Astro.generator} />
@@ -28,8 +29,17 @@ const { title } = Astro.props;
 			<div id="title">
 				<h1>{title}</h1>
 			</div>
+			<div id="spacer-header" />
 		</header>
-		<div x-show="menu_open" x-transition @click.outside="menu_open = false" id="menu">
+		<div x-cloak x-show="menu_open"
+			 x-transition:enter="transition ease-in duration-10"
+			 x-transition:enter-start="opacity-0"
+			 x-transition:enter-end="opacity-100"
+			 x-transition:leave="transition ease-out duration-10"
+			 x-transition:leave-start="opacity-100"
+			 x-transition:leave-end="opacity-0"
+			 @click.outside="menu_open = false"
+			 id="menu">
 			<a href="tttt">About</a>
 			<a href="tttt">Services</a>
 			<a href="tttt">Clients</a>
