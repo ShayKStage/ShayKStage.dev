@@ -5,6 +5,7 @@ export interface Props {
 
 import '../../styles/global.scss?global'
 import 'primeicons/primeicons.css';
+import {When} from "@astropub/flow";
 
 const { title } = Astro.props;
 ---
@@ -27,7 +28,12 @@ const { title } = Astro.props;
 				<span class="pi pi-bars" style="font-size: 2rem" />
 			</div>
 			<div id="title">
-				<h1>{title}</h1>
+				<When test1={title != "314ShadePi"}>
+					<h1><a href="/">314ShadePi</a>&nbsp;- {title}</h1>
+					<Fragment slot="else">
+						<h1>{title}</h1>
+					</Fragment>
+				</When>
 			</div>
 			<div id="spacer-header" />
 		</header>
@@ -40,12 +46,17 @@ const { title } = Astro.props;
 			 x-transition:leave-end="opacity-0"
 			 @click.outside="menu_open = false"
 			 id="menu">
-			<a href="#">there's</a>
-			<a href="#">nothing</a>
-			<a href="#">here</a>
-			<a href="#">yet</a>
+			<nav>
+				<ol id="">
+					<li><a href="/">314ShadePi</a></li>
+					<li><a href="/projects">projects</a></li>
+					<li><a href="https://github.com/314ShadePi" target="_blank">my github</a></li>
+				</ol>
+			</nav>
 		</div>
 		<div id="space-top" />
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>

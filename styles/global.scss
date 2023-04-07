@@ -63,27 +63,44 @@ html {
       justify-content: center;
       flex-direction: column;
       box-shadow: 5px 5px 5px #000000;
-      a {
-        font-family: 'JetBrains Mono', serif;
-        font-style: italic;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 32px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: #ffffff;
-        text-decoration: none;
-        margin-bottom: 20px;
+      nav {
+        ol {
+          li {
+            a {
+              font-family: 'JetBrains Mono', serif;
+              font-style: italic;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 32px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              color: #ffffff;
+              text-decoration: none;
+              margin-bottom: 20px;
 
-        &:hover {
-          color: #da62c4;
+              &:hover {
+                color: #da62c4;
+              }
+            }
+          }
         }
       }
     }
 
     #space-top {
       height: 50px;
+    }
+
+    main {
+      margin: auto;
+      padding: .5rem;
+      max-width: 60ch;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
     }
   }
 }
