@@ -2,6 +2,8 @@
 :root {
   --accent: 124, 58, 237;
   --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+  --accent-gradient-genderfluid: linear-gradient(90deg, rgba(255,118,164,1) 0%, rgba(255,255,255,1) 25%, rgba(192,17,215,1) 50%, rgba(0,0,0,1) 75%, rgba(47,60,190,1) 100%);
+  --accent-gradient-genderfluid-2: linear-gradient(90deg, rgba(255,118,164,1) 0%, rgba(255,118,164,1) 20%, rgba(255,255,255,1) 20%, rgba(255,255,255,1) 40%, rgba(192,17,215,1) 40%, rgba(192,17,215,1) 60%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 80%, rgba(47,60,190,1) 80%, rgba(47,60,190,1) 100%);
 }
 html {
   font-family: system-ui, sans-serif;
@@ -13,7 +15,7 @@ html {
       left: 0;
       width: 100%;
       height: 50px;
-      background-color: rebeccapurple;
+      background-image: var(--accent-gradient-genderfluid-2);
       display: flex;
       box-shadow: 0 5px 5px #000000;
       margin-bottom: 100px;

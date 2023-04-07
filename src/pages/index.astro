@@ -1,20 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import {Prism} from "@astrojs/prism";
-import SolidTest from "../components/SolidTest.jsx";
 ---
 
 <Layout title="314ShadePi">
 	<main>
 		<h1><span style="color:#FF0000">l</span><span style="color:#FFAA00">o</span><span style="color:#AAFF00">l</span> <span style="color:#00FF00">h</span><span style="color:#00FFAA">i</span><span style="color:#00AAFF">,</span> <span style="color:#0000FF">i</span><span style="color:#AA00FF">'</span><span style="color:#FF00AA">m</span> <span class="text-gradient">Shay</></h1>
-		<!--<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-		</ul>-->
+		<p id="stuff"><span class="text-gradient-2">i make stuff</span></p>
 	</main>
 </Layout>
 
@@ -27,42 +18,29 @@ import SolidTest from "../components/SolidTest.jsx";
 		align-content: center;
 		justify-content: center;
 		text-align: center;
+		flex-direction: column;
 	}
 	h1 {
 		font-size: 3rem;
 		font-weight: 800;
-		margin: 0;
+		margin: auto;
 	}
 	.text-gradient {
-		background-image: var(--accent-gradient);
+		background-image: var(--accent-gradient-genderfluid);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		background-size: 400%;
+		background-size: 100%;
 		background-position: 0;
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+	.text-gradient-2 {
+		background-image: var(--accent-gradient-genderfluid-2);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100%;
+		background-position: 0;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	#stuff {
+		font-size: 1.5rem;
+		font-weight: 500;
 	}
 </style>
