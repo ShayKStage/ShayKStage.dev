@@ -95,13 +95,15 @@ html {
 
     main {
       margin: auto;
-      padding: .5rem;
-      max-width: 60ch;
+      max-width: 95%;
       display: flex;
       align-content: center;
       justify-content: center;
       text-align: center;
       flex-direction: column;
+      * {
+        overflow-wrap: break-word;
+      }
     }
   }
 }

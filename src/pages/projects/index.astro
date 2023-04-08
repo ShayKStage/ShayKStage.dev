@@ -5,11 +5,48 @@ const projects = await getCollection('projects');
 ---
 
 <Layout title="Projects">
-        <ul>
-            {projects.map(project => (
-                <li>
-                    <a href={`/projects/${project.slug}`}>{project.data.title}</a>
-                </li>
-            ))}
-        </ul>
+        <div>
+                <ul id="projects" class="collection-entries-list">
+                    {projects.map(project => (
+                        <li class="project collection-entry">
+                                <div>
+                                        <div class="nobr" nowrap>
+                                                <nobr>
+                                                        <h2>
+                                                                <a href={`/projects/${project.slug}`}>{project.data.title}</a>
+                                                                -
+                                                                <a href="/#">{project.data["author"]}</a>
+                                                        </h2>
+                                                </nobr>
+                                        </div>
+                                        <p>{project.data.description}</p>
+                                </div>
+                        </li>
+                    ))}
+                </ul>
+        </div>
 </Layout>
+
+<style>
+        .nobr {
+                white-space: nowrap;
+        }
+        #projects {
+                list-style: none;
+                padding: 0;
+        }
+        #projects .project {
+                margin: 1rem 0;
+        }
+        #projects .project a {
+                text-decoration: none;
+                color: inherit;
+        }
+        #projects .project a:hover {
+                text-decoration: underline;
+        }
+        #projects .project h2 {
+                font-size: 3rem;
+                font-weight: 700;
+        }
+</style>
