@@ -1,0 +1,3 @@
+[submodule "public/crucial.css"]
+	path = public/crucial.css
+	url = git@github.com:saltnpixels/crucial.css.git
