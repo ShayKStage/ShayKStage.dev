@@ -1,0 +1,47 @@
+---
+import AuthorAlias from "../../components/AuthorAlias.jsx";
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from "astro:content";
+const authors = await getCollection('authors');
+---
+
+<Layout title="Authors">
+        <div>
+                <ul id="authors" class="collection-entries-list">
+                    {authors.map(author => (
+                        <li class="author collection-entry">
+                                <div>
+                                        <div class="nobr" nowrap>
+                                                        <h2><a href={`/authors/${author.slug}`}>{author.data.name}</a><AuthorAlias author={author}/></h2>
+                                        </div>
+                                        <p>{author.data.description}</p>
+                                </div>
+                        </li>
+                    ))}
+                </ul>
+        </div>
+</Layout>
+
+<style>
+        .nobr {
+                white-space: nowrap;
+        }
+        #authors {
+                list-style: none;
+                padding: 0;
+        }
+        #authors .author {
+                margin: 1rem 0;
+        }
+        #authors .author a {
+                text-decoration: none;
+                color: inherit;
+        }
+        #authors .author a:hover {
+                text-decoration: underline;
+        }
+        #authors .author h2 {
+                font-size: 3rem;
+                font-weight: 700;
+        }
+</style>

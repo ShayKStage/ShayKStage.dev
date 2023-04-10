@@ -15,7 +15,7 @@ const projects = await getCollection('projects');
                                                         <h2>
                                                                 <a href={`/projects/${project.slug}`}>{project.data.title}</a>
                                                                 -
-                                                                <a href="/#">{project.data["author"]}</a>
+                                                                [<span x-data={`{ links: "${project.data["authors"].map(author => (`<a href='/authors/${author.toLowerCase().replace(/ /g, "-")}'>${author}</a>`)).join(", ")}" }`} x-html="links"/>]
                                                         </h2>
                                                 </nobr>
                                         </div>

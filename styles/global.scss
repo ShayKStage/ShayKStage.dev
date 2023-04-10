@@ -111,3 +111,16 @@ code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
   Bitstream Vera Sans Mono, Courier New, monospace;
 }
+
+.collection-entry a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.collection-entry a:hover {
+  text-decoration: underline;
+}
+
+.nobr {
+  white-space: nowrap;
+}

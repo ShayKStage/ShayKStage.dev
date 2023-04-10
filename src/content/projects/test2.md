@@ -1,7 +1,9 @@
 ---
 title: "Test2"
 description: "2This is a test to see if things work"
-author: "yeet"
+authors:
+  - "yeet1"
+  - "yeet2"
 ---
 
 2this is a test to see if things work
