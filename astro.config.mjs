@@ -1,17 +1,28 @@
-import { defineConfig } from 'astro/config';
-import vue from "@astrojs/vue";
-import solidJs from "@astrojs/solid-js";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import prefetch from "@astrojs/prefetch";
-import markdoc from "@astrojs/markdoc";
 import alpinejs from "@astrojs/alpinejs";
-import svelte from "@astrojs/svelte";
 import lit from "@astrojs/lit";
+import markdoc from "@astrojs/markdoc";
+import mdx from "@astrojs/mdx";
+import prefetch from "@astrojs/prefetch";
+import sitemap from "@astrojs/sitemap";
+import solidJs from "@astrojs/solid-js";
+import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
+import vue from "@astrojs/vue";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://314shadepi.github.io',
-  integrations: [mdx(), vue(), solidJs(), sitemap(), prefetch(), markdoc(), alpinejs(), svelte(), lit(), tailwind()]
+	site: "https://ShayKStage.github.io",
+	integrations: [
+		mdx(),
+		vue(),
+		solidJs(),
+		sitemap(),
+		prefetch(),
+		markdoc(),
+		alpinejs(),
+		svelte(),
+		lit(),
+		tailwind(),
+	],
 });
