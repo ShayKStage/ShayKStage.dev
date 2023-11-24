@@ -1,3 +1,99 @@
+@font-face {
+  font-family: "MonaspiceXe NFM";
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-Regular.otf');
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonaspiceXe NFM";
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-Medium.otf');
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-Medium.otf') format('opentype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonaspiceXe NFM";
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-Bold.otf');
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonaspiceXe NFM";
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-Italic.otf');
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "MonaspiceXe NFM";
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-MediumItalic.otf');
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-MediumItalic.otf') format('opentype');
+  font-weight: medium;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "MonaspiceXe NFM";
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-BoldItalic.otf');
+  src: url('/fonts/monaspice/MonaspiceXeNerdFontMono-BoldBoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "MonaspiceRn NFM";
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-Regular.otf');
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonaspiceRn NFM";
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-Medium.otf');
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-Medium.otf') format('opentype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonaspiceRn NFM";
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-Bold.otf');
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MonaspiceRn NFM";
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-Italic.otf');
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "MonaspiceRn NFM";
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-MediumItalic.otf');
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-MediumItalic.otf') format('opentype');
+  font-weight: medium;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "MonaspiceRn NFM";
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-BoldItalic.otf');
+  src: url('/fonts/monaspice/MonaspiceRnNerdFontMono-BoldBoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
 :root {
 	--text: #bfd3e6;
 	--background: #11141d;
@@ -24,6 +120,16 @@ li {
 	/* reset the margin and padding */
 	margin: 0;
 	padding: 0;
+}
+
+* {
+  font-family: "MonaspiceRn NFM";
+}
+
+h1, h2,
+h3, h4,
+h5, h6 {
+  font-family: "MonaspiceXe NFM";
 }
 
 #root-container {
