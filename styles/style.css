@@ -143,6 +143,16 @@ h5, h6 {
 
 #root-container nav {
 	grid-area: nav;
+  justify-self: center;
+}
+
+#root-container nav ul li a, #root-container nav ul li a:hover,
+#root-container nav ul li a:visited, #root-container nav ul li a:focus,
+#root-container nav ul li a:active {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
+  cursor: pointer;
 }
 
 #root-container header {
