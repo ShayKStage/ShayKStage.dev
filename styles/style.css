@@ -112,9 +112,6 @@
   --primary: #321145;
   --secondary: #6ab485;
   --accent: #0b2f00;
-}
-
-* {
   color: var(--text);
   background-color: var(--background);
 }
