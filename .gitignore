@@ -1,0 +1,3 @@
+projectspecification/*
+!projectspecification/*.tex
+!projectspecification/*.txt

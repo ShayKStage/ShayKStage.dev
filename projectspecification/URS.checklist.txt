@@ -1,0 +1,70 @@
+NavLinks [
+- Home<@>
+- Github/ShayKStage<https://github.com/ShayKStage>
+- Projects<@/projects>
+- Docs<https://doc.@>
+]
+
+{
+# Home<@>
+
+Contains an "about me" section, featured projects and (if applicable) their corresponding docpages.
+
+Links [
+- (each featured_project{$FEATURED_PROJECT$<@/projects/$FEATURED_PROJECT$>})
+- (each featured_project{$FEATURED_PROJECT_DOC$<https://doc.@/$FEATURED_PROJECT_DOC$>})
+]
+}
+
+{
+# Projects<projects>
+
+A list of my projects, with links to their respective subpages and (if applicable) docpages.
+
+Links [
+- (each project{$PROJECT$<@/projects/$PROJECT$>})
+- (each project{$PROJECT_DOC$<https://doc.@/$PROJECT_DOC$>})
+]
+}
+
+{
+# (each project{$PROJECT$<@/projects/$PROJECT$>})
+
+A description, small usage guide, etc. of $PROJECT$
+
+Links [
+- (if applicable{$PROJECT_DOC$<https://doc.@/$PROJECT_DOC$>})
+- (if applicable{$PROJECT_REF$<https://doc.@/$PROJECT_REF$>})
+]
+}
+
+{
+# Docs<https://doc.@>
+
+Contains an index of projects *with* documentation, similar to Projects<projects>. It also links to the projects reference, if there is any.
+
+Links [
+- (each project{$PROJECT_DOC$<https://doc.@/$PROJECT_DOC$>})
+- (each project{$PROJECT_REF$<https://doc.@/reference/$PROJECT_REF$>})
+]
+}
+
+{
+# (each project{$PROJECT_DOC$<https://doc.@/$PROJECT_DOC$>})
+
+Documentation, usage, tutorial, etc. for $PROJECT$
+
+Links [
+- (if applicable{$PROJECT_REF$<https://doc.@/reference/$PROJECT_REF$>})
+]
+}
+
+{
+# (each project{$PROJECT_REF$<https://doc.@/$PROJECT_REF$>})
+
+Reference for $PROJECT$ (eg. rustdoc).
+
+Links [
+- (if applicable{$PROJECT_DOC$<https://doc.@/$PROJECT_DOC$>})
+]
+}
